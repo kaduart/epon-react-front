@@ -1,0 +1,36 @@
+.navbar-progress{
+  display: table;
+  width: 100%;
+}
+.navbar-progress>div{
+    display: table-cell;
+    vertical-align: middle;
+}
+.navbar-progress>div:before{
+  background-color: rgba(166, 214, 172, 1);
+  content: '';
+  display: inline-block;
+  height: 6px;
+  width: calc(100% - 30px);
+  position: relative;
+  top: -3px;
+}
+.navbar-progress>div:first-child:before{
+  display: none;
+}
+.navbar-progress>div:first-child{
+  width: 1%;
+}
+.navbar-progress>div>button{  
+  background-color: rgba(166, 214, 172, 1);
+  border: 1px solid rgba(166, 214, 172, 1);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+}
+.navbar-progress>div.active>button,
+.navbar-progress>div>button:hover{  
+  background-color: #306430;
+  border-color: #306430;
+}

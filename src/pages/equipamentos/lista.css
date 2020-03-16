@@ -1,0 +1,70 @@
+.list-responsive{
+    min-height: .01%;
+    overflow-x: auto;
+}
+.list{  
+    border-spacing: 3px 6px;
+    width: 100%;
+    max-width: 100%;
+}
+/* .list tr:nth-of-type(odd){
+    background-color: #dfe2e4;
+} */
+.list tr:hover td{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.list td,
+.list th {
+    background-color: rgba(0, 0, 0, 0.13);
+    /* color: #fff; */
+    padding: 6px 10px;
+    text-align: center;
+    border-radius: 3px;
+}
+.list th{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.list .text-left {
+    text-align: left;
+}
+.list .text-right {
+    text-align: right;
+}
+.list .disabled {
+    opacity: .7;
+}
+.list button{
+    padding: 4px;
+    font-size: 18px;
+    margin: 0 2px;
+}
+.list button{
+    padding: 6px 7px;
+    font-size: 18px;
+    margin: 0 2px;
+    border-radius: 3px;
+    border: 1px solid;
+}
+.list .servicos button{
+    padding: 6px 10px;
+}
+
+.list .inativo{
+    background-color: #898b8c;
+    border-color: #898b8c !important;
+}
+.list .danger{
+    background-color: #dc3545;
+    border-color: #dc3545 !important;
+}
+.list .success{
+    background-color: #28a745;
+    border-color: #28a745 !important;
+}
+.list .warning{
+    background-color: #ffc107;
+    border-color: #ffc107 !important;
+}
+.list .progress{
+    height: 6px;
+}

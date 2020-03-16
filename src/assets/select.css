@@ -1,0 +1,84 @@
+.form-group.select-line .form-control{
+  display: block;
+  width: 100%;
+  padding: 14px 10px 5px 5px;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #495057;
+  background-color: #fff;
+  border: none;
+  border-bottom: 3px solid #ced4da;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-radius: 0;
+}
+.form-group.select-line p.form-control{
+  padding-top: 20px;
+  margin: 0;
+  min-height: 44px;
+}
+
+.form-group.select-line .form-control[value*="a"] {
+  color: #495057;
+  border-color: #0c7a2f;
+  outline: 0;
+  box-shadow: none;
+}
+.form-group.select-line .form-label {
+  color: currentColor;
+  cursor: auto;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  margin: 0;
+  opacity: .7;
+  transition: top 0.15s ease-in-out, font-size 0.15s ease-in-out;
+}
+/* .form-group.select-line .form-control[value*="a"] + .form-label{ */
+.form-group.select-line .form-control + .form-label{
+  color: #0c7a2f;
+  line-height: 85%;
+  font-size: 95%;
+  left: 10px;
+  top: 0px;
+  opacity: 1;
+}
+
+
+.multiselect-box{
+  display: table;
+  width: 100%;
+}
+.multiselect-box>.multiselect-itens{
+  display: table-cell;
+  border: 1px solid #0c7a2f;
+  border-radius: 3px;
+}
+.multiselect-box .mult-item-check{
+  position: relative;
+}
+.multiselect-box .mult-item-check input{
+  display: none;
+}
+.multiselect-box .mult-item-check input:checked + label{
+  background-color: #0c7a2f;
+  color: #fff;
+}
+.multiselect-box .mult-item-check label{
+  display: block;
+  padding: 5px 10px;
+  margin: 0;
+}
+.multiselect-box .mult-item-check label:hover{
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.multiselect-box>.multiselect-btn{
+  display: table-cell;
+  width: 1%;
+  vertical-align: middle;
+}
+
+.multiselect-box>.multiselect-btn button{
+  margin: 5px 10px;
+}

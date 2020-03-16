@@ -1,0 +1,11 @@
+.box-grupos .bt-criar{
+    border-radius: 50%;
+    padding: 10px;
+    transform: rotate(45deg);
+}
+.box-grupos .card{
+    margin-bottom: 15px;
+}
+.box-grupos .card small{
+    display: block;
+}

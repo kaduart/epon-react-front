@@ -1,0 +1,8 @@
+.box-clientes .bt-criar{
+    border-radius: 50%;
+    padding: 10px;
+    transform: rotate(45deg);
+}
+.box-clientes .dropdown-menu{
+    position: fixed;
+}

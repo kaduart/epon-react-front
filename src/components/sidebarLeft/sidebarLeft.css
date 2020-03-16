@@ -1,0 +1,15 @@
+aside.sidebar-left{
+  background-color: #dadada;
+  border-right: 3px solid #52a753;
+  box-shadow: 0px 6px 5px 0px #000000ad;
+  min-width: 300px;
+  overflow: auto;
+}
+@media (max-width: 768px){
+  aside.sidebar-left{
+    position: absolute;
+    left: 0;
+    height: calc(100vh - 45px);
+    z-index: 2;
+  }
+}

@@ -1,0 +1,41 @@
+aside.sidebar-right{
+  background-color: #dadada;
+    border-left: 3px solid #52a753;
+  	width: 300px;
+    position: absolute;
+    right: 0px;
+    height: calc(100% - 40px);
+    overflow: auto;
+}
+
+.sidebar-right .info-usuario{
+  border-bottom: 1px solid #c3c3c3;
+  text-align: center;
+}
+.sidebar-right .info-usuario .img-usuario{
+    margin: 15px auto 10px auto;
+    max-width: 100px;
+    max-height: 100px;
+}
+.sidebar-right .info-usuario .img-usuario svg{
+  float: none;
+  font-size: 70px;
+}
+.sidebar-right .info-usuario h5 small{
+  display: block;
+}
+.sidebar-right .bt-sair{
+  margin: 40px 5% 0 5%;
+  width: 90%;
+}
+.sidebar-right .version-sistem{
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+}
+.margin-top-100{
+  margin-top: 100%;
+}
+.margin-top-20{
+  margin-top: 20px;
+}

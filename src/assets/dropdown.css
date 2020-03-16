@@ -1,0 +1,94 @@
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+}
+.dropdown-toggle-split::after {
+  margin-left: 0;
+}
+.dropdown-menu {
+  display: none;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 3px;
+  padding: 5px 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+}
+.dropdown-menu.active,
+.dropdown.down-hover button:hover + .dropdown-menu,
+.dropdown.down-hover .dropdown-menu:hover {
+  display: inline-block;
+}
+.dropdown-divider {
+  height: 0;
+  margin: .5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
+}
+.dropdown .dropdown-menu a{
+  display: block;
+  color: #333;
+  padding: 8px 15px;
+  white-space: nowrap;
+  width: 100%;
+}
+.dropdown .dropdown-menu a:hover{
+  background-color: #00802a;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown .dropdown-toggle.btn-primary + .dropdown-menu a:hover{
+  background-color: #0069d9;
+  color: #fff;
+}
+.dropdown .dropdown-toggle.btn-secondary + .dropdown-menu a:hover{
+  background-color: #6c757d;
+  color: #fff;
+}
+.dropdown .dropdown-toggle.btn-success + .dropdown-menu a:hover{
+  background-color: #218838;
+  color: #fff;
+}
+.dropdown .dropdown-toggle.btn-info + .dropdown-menu a:hover{
+  background-color: #17a2b8;
+  color: #fff;
+}
+.dropdown .dropdown-toggle.btn-warning + .dropdown-menu a:hover{
+  background-color: #ffc107;
+  color: #212529;
+}
+.dropdown .dropdown-toggle.btn-danger + .dropdown-menu a:hover{
+  background-color: #c82333;
+  color: #fff;
+}
+.dropdown .dropdown-toggle.btn-light + .dropdown-menu a:hover{
+  background-color: #e2e6ea;
+  color: #212529;
+}
+.dropdown .dropdown-toggle.btn-dark + .dropdown-menu a:hover{
+  background-color: #23272b;
+  color: #fff;
+}
+
+.dropdown-background{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
