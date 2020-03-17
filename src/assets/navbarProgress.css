@@ -7,13 +7,13 @@
     vertical-align: middle;
 }
 .navbar-progress>div:before{
-  background-color: rgba(166, 214, 172, 1);
+  background-color: #6c757d;
   content: '';
   display: inline-block;
   height: 6px;
   width: calc(100% - 30px);
   position: relative;
-  top: -3px;
+  top: -4px;
 }
 .navbar-progress>div:first-child:before{
   display: none;
@@ -22,8 +22,8 @@
   width: 1%;
 }
 .navbar-progress>div>button{  
-  background-color: rgba(166, 214, 172, 1);
-  border: 1px solid rgba(166, 214, 172, 1);
+  background-color: #6c757d;
+  border: 1px solid #6c757d;
   border-radius: 50%;
   height: 20px;
   width: 20px;
@@ -31,6 +31,6 @@
 }
 .navbar-progress>div.active>button,
 .navbar-progress>div>button:hover{  
-  background-color: #306430;
-  border-color: #306430;
+  background-color: #28a745;
+  border-color: #28a745;
 }

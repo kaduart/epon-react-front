@@ -2,10 +2,10 @@ import { LOGIN_USER } from '../actions/actionTypes';
 import { LOGOUT_USER } from '../actions/actionTypes';
 
 const inicialize = {
-		'id': '999999',
-		'nome': 'Nome Sobrenome fake',
-		'perfil': 'perfil',
-		'foto': 'perfil',
+		// 'id': '999999',
+		// 'nome': 'Nome Sobrenome fake',
+		// 'perfil': 'perfil',
+		// 'foto': 'perfil',
 		'preferencia': {'contrast': true}
 }
 // const inicialize = {};

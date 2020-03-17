@@ -3,8 +3,8 @@ import { addAlert, guardarCadastro } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import './Login.css';
-import { InputLine } from '../../components/form';
+import './../login/Login.css';
+import { InputLine, InputInbox } from '../../components/form';
 
 const inputsDefault = {'nome': '', 'sobrenome':'', 'email':'', 'emailConfirme':'', 'emailAlternativo':''};
 
@@ -30,7 +30,7 @@ const DadosPessoais = (props) => {
 			</div>
 			<div className="row">     
 				<div className="col-md-12">
-					<InputLine
+					<InputInbox
 						type="text"
 						name="nome"
 						label="Nome"
@@ -41,7 +41,7 @@ const DadosPessoais = (props) => {
 					/>
 				</div>
 				<div className="col-md-12">
-					<InputLine
+					<InputInbox
 						type="text"
 						name="sobrenome"
 						label="Sobrenome"
@@ -52,7 +52,7 @@ const DadosPessoais = (props) => {
 					/>
 				</div>
 				<div className="col-md-12">
-					<InputLine
+					<InputInbox
 						type="email"
 						name="email"
 						label="E-mail"
@@ -62,8 +62,8 @@ const DadosPessoais = (props) => {
 						validate={true}
 					/>
 				</div>
-				<div className="col-md-12">
-					<InputLine
+				{/* <div className="col-md-12">
+					<InputInbox
 						type="email"
 						name="emailConfirme"
 						label="confirme E-mail"
@@ -72,9 +72,9 @@ const DadosPessoais = (props) => {
 						required={true}
 						validate={true}
 					/>
-				</div>
+				</div> */}
 				<div className="col-md-12">
-					<InputLine
+					<InputInbox
 						type="email"
 						name="emailAlternativo"
 						label="E-mail alternativo"
@@ -87,7 +87,7 @@ const DadosPessoais = (props) => {
 			</div>
 			<div className="row box-btn">
 				<div className="col-md-6 col-sm-6">
-					<button type="button" className="btn-secondary btn-block"> Cancelar </button>
+					<button type="button" className="btn-secondary btn-block" onClick={()=> info.history.push('/login')}> Cancelar </button>
 				</div>
 				<div className="col-md-6 col-sm-6">
 					<button type="button" className="btn-success btn-block" onClick={()=> guardarInfo()}> Próximo </button>

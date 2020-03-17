@@ -5,21 +5,26 @@ import { removeAlert } from './../../actions';
 import { IcoClose } from './../icones'
 
 const AlertMensages = (props) => {
+    const {user, removeAlert, alerts} = props;
     const CloseMensage = (event) => {
-        props.removeAlert(event)
+        removeAlert(event)
     }
 
-    if (props.alerts.length > 0) {
+    if (!user.id && window.location.pathname !== '/login') {
+    window.location.replace('/login');
+    }
+    
+    if (alerts.length > 0) {
         setTimeout(function(){ 
-            props.removeAlert( props.alerts[props.alerts.length -1].id )            
+            removeAlert( alerts[alerts.length -1].id )            
         }, 3000);
     }
 
-    if (props.alerts) {
+    if (alerts) {
         return (
             <div className="alerts-box">
                 {
-                    props.alerts.map((alerta, key) =>
+                    alerts.map((alerta, key) =>
                         <div key={key} className={'alert-'+alerta.style}>
                             {alerta.text}
                             <button className="close" onClick={() => CloseMensage(alerta.id)} name={alerta.id} ><IcoClose title="Fechar" /></button>
@@ -34,8 +39,11 @@ const AlertMensages = (props) => {
 }
 
 const mapStateToProps = store => {
+    console.log(store);
+    
 	return ({
-		alerts: store.alerts
+		alerts: store.alerts,
+		user: store.user
 })};
 const mapDispatchToProps = dispatch =>
   bindActionCreators({ removeAlert }, dispatch);

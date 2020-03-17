@@ -3,8 +3,8 @@ import { addAlert, guardarCadastro } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import './Login.css';
-import { InputLine } from '../../components/form';
+import './../login/Login.css';
+import { InputLine, InputInbox } from '../../components/form';
 
 const inputsDefault = {'senha': '', 'senhaConfirmar':''};
 
@@ -29,7 +29,7 @@ const DadosSenha = (props) => {
 			</div>
 			<div className="row">				
 				<div className="col-md-12">
-					<InputLine
+					<InputInbox
 						type="password"
 						name="senha"
 						label="Senha"
@@ -40,7 +40,7 @@ const DadosSenha = (props) => {
 					/>
 				</div>
 				<div className="col-md-12">
-					<InputLine
+					<InputInbox
 						type="password"
 						name="senhaConfirmar"
 						label="Confirmar Senha"
@@ -53,7 +53,7 @@ const DadosSenha = (props) => {
 			</div>
 			<div className="row box-btn">
 				<div className="col-md-6 col-sm-6">
-					<button type="button" className="btn-secondary btn-block"> Cancelar </button>
+					<button type="button" className="btn-secondary btn-block" onClick={()=> info.history.push('/login')}> Cancelar </button>
 				</div>
 				<div className="col-md-6 col-sm-6">
 					<button type="button" className="btn-success btn-block" onClick={()=> guardarInfo()}> Próximo </button>

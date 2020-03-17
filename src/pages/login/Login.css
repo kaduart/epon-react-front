@@ -1,10 +1,62 @@
+.box-center-page{
+	background-color: #c4c4c4;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+    height: 100vh;
+}
+.box-center{
+	background-color: #fff;
+	border: 1px solid #c3c3c3;
+}
+
+.box-center-content{	
+	padding: 20px 15px 15px 15px;
+}
+.box-center-content .titulo{
+	margin-bottom: 10px;;
+	text-align: center;
+}
+.box-center-content [class*="btn-"]{
+	margin-top: 15px;
+}
+.link-custom-login{
+	margin-bottom: 10px;
+}
+.link-custom-login.right{
+	float: right;
+}
+
+
+
+
+
+
+
+
+.intelbras-dark .box-center-page{
+	background-color: #242424;
+}
+.intelbras-dark .box-center{
+	background-color: #333;
+	border-color: #3e5055;
+}
+
+
+
+
+	/*.box-center-page{
+	margin: auto;
+}
 .box-center-width{
 	display: table;
-	margin: auto;
 	height: calc(100vh);
-   width: 100%;
+	width: 100%;
+	max-width: 100%;
 }
-.box-center-height{
+ .box-center-height{
 	display: table-cell;
 	padding: 0 15px;
 	vertical-align: middle;
@@ -37,4 +89,15 @@
 }
 .box-btn{
 	margin-top: 20px;
-}
+} 
+*/
+
+
+
+/* .intelbras-dark .intelbras-login{
+	background-color: #333;
+  }
+  .intelbras-dark .box-login{
+	background-color: #242424;
+	border-color: #3e5055;
+  } */

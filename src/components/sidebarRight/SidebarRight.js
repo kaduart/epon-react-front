@@ -9,11 +9,11 @@ import { CheckboxSwitch } from '../form';
 
 const MenuAdmJson = [
 	{		
-		"item": "meusDados",
+		"item": "meus-dados",
 		"text": "Meus dados"
 	},
 	{		
-		"item": "gerenciarPessoas",
+		"item": "gerenciar-pessoas",
 		"text": "Gerenciar pessoas"
 	}
 ]

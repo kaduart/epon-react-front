@@ -8,5 +8,6 @@ export * from './multSelectLineBox';
 
 export * from './checkboxSwitch';
 export * from './inputInbox';
+export * from './selectInbox';
 export * from './inputInboxSee';
 export * from './textareaInbox';

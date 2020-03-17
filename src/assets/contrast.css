@@ -63,11 +63,3 @@
 .intelbras-dark .form-group.input-line .form-control[value="a"]{
   border-color: #36d95b;
 }
-
-.intelbras-dark .intelbras-login{
-  background-color: #333;
-}
-.intelbras-dark .box-login{
-  background-color: #242424;
-  border-color: #3e5055;
-}

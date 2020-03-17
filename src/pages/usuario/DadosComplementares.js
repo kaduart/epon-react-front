@@ -3,8 +3,8 @@ import { addAlert, guardarCadastro } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import './Login.css';
-import { InputLine, SelectLine } from '../../components/form';
+import './../login/Login.css';
+import { InputLine, SelectLine, InputInbox, SelectInbox } from '../../components/form';
 import EstadoCidade from './estados-cidades.json';
 
 const inputsDefault = {'telefone': '', 'cep':'', 'uf':'', 'cidade':'', 'perfil':''};
@@ -37,7 +37,7 @@ const DadosComplementares = (props) => {
 			</div>
 			<div className="row">     
 				<div className="col-md-6">
-					<InputLine
+					<InputInbox
 						type="text"
 						name="telefone"
 						label="Telefone"
@@ -48,7 +48,7 @@ const DadosComplementares = (props) => {
 					/>
 				</div>
 				<div className="col-md-6">
-					<InputLine
+					<InputInbox
 						type="text"
 						name="cep"
 						label="Cep"
@@ -59,7 +59,7 @@ const DadosComplementares = (props) => {
 					/>
 				</div>
 				<div className="col-md-4">
-					<SelectLine
+					<SelectInbox
 						type="text"
 						name="uf"
 						label="UF"
@@ -73,7 +73,7 @@ const DadosComplementares = (props) => {
 					/>
 				</div>
 				<div className="col-md-8">
-					<SelectLine
+					<SelectInbox
 						labelDefault=""
 						idDefault={false}
 						type="text"
@@ -88,7 +88,7 @@ const DadosComplementares = (props) => {
 					/>
 				</div>
 				<div className="col-md-12">
-					<SelectLine
+					<SelectInbox
 						type="text"
 						name="perfil"
 						label="Perfil"
@@ -104,7 +104,7 @@ const DadosComplementares = (props) => {
 			</div>
 			<div className="row box-btn">
 				<div className="col-md-6 col-sm-6">
-					<button type="button" className="btn-secondary btn-block"> Cancelar </button>
+					<button type="button" className="btn-secondary btn-block" onClick={()=> info.history.push('/login')}> Cancelar </button>
 				</div>
 				<div className="col-md-6 col-sm-6">
 					<button type="button" className="btn-success btn-block" onClick={()=> guardarInfo()}> Próximo </button>

@@ -6,7 +6,7 @@ import { addAlert } from './../../actions';
 import { ValidationForm } from './../../components/Validation';
 
 import './Login.css';
-import { InputLine } from '../../components/form';
+import { InputLine, InputInbox } from '../../components/form';
 import { IcoIntelbras } from '../../components/icones';
 
 const inputsDefault = {'email': ''};
@@ -38,8 +38,8 @@ const Esqueci = (props) => {
 	}
 	
 	return (
-		<div>
-			<div className="box-center-width" style={{maxWidth: '400px'}}>            
+		<div className="box-center-page">
+			<div className="box-center" style={{maxWidth: '400px'}}>            
 				<iframe style={{display:'none'}} title="InfoUnredirect" name="InfoUnredirect"></iframe>
 
 				<form target="InfoUnredirect" method="POST" className="box-center-height" >			
@@ -50,15 +50,15 @@ const Esqueci = (props) => {
 						<div className="d">
 						</div>
 					</header>
-					<div className="box-login">
+					<div className="box-center-content">
 						<div className="row">     
-							<div className="col-md-12 margin-bottom-15">
+							<div className="col-md-12">
 								<h5 className="titulo">Relembrar senha!</h5>
 							</div>
 						</div>
 						<div className="content-login">						
-							<InputLine
-								type="text"
+							<InputInbox
+								type="email"
 								name="email"
 								label="E-mail"
 								value={inputs['email']}

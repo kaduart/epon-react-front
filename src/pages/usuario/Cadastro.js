@@ -7,7 +7,7 @@ import { passwordConfirm, ValidationForm } from '../../components/Validation';
 import { MaskItem } from './../../components/Mask';
 import { IcoCross, IcoIntelbras } from '../../components/icones';
 
-import './Login.css';
+import './../login/Login.css';
 import { InputLine } from '../../components/form';
 import PassoaPasso from './PassoaPasso';
 import DadosPessoais from './DadosPessoais';
@@ -54,8 +54,8 @@ const CriarPerfil = (props) => {
 	}
 	
     return (
-		<div>
-			<div className="box-center-width" style={{maxWidth: '500px'}}>
+		<div className="box-center-page">
+			<div className="box-center" style={{maxWidth: '500px'}}>
 				{/* <input type="hidden" style={{display:'none'}} name="InfoUnredirect" /> */}
 				<iframe style={{display:'none'}} title="InfoUnredirect" name="InfoUnredirect"></iframe>
 
@@ -67,7 +67,7 @@ const CriarPerfil = (props) => {
 						<div className="d">
 						</div>
 					</header>
-					<div className="box-login">
+					<div className="box-center-content">
 						<PassoaPasso info={props} />
 						{
 							(Number(product) === 1)?

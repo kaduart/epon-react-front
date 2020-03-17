@@ -16,7 +16,7 @@ const PassoaPasso = (props) => {
 	const product = urlParams.get('passo')
 	
     return (
-		<div className="navbar-progress">
+		<div className="navbar-progress margin-bottom-15">
 			<div className={(Number(product) === 1)?'active':''}><button type="button" onClick={(event)=> ativaPasso(1)} title={'Dados Pessoais'}></button></div>
 			<div className={(Number(product) === 2)?'active':''}><button type="button" onClick={(event)=> ativaPasso(2)} title={'Dados Complementares'}></button></div>
 			<div className={(Number(product) === 3)?'active':''}><button type="button" onClick={(event)=> ativaPasso(3)} title={'Senha'}></button></div>

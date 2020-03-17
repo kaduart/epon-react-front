@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { ValidationForm } from './../../components/Validation';
 import { IcoEnter, IcoIntelbras } from './../../components/icones';
-import { InputLine } from './../../components/form';
+import { InputLine, InputInbox } from './../../components/form';
 
 import './Login.css';
 const inicialize = {
@@ -59,8 +59,8 @@ const Login = (props) =>{
 	}
 
 	return (
-		<div>
-			<div className="box-center-width" style={{maxWidth: '400px'}}>
+		<div className="box-center-page">
+			<div className="box-center" style={{maxWidth: '400px'}}>
 				<iframe style={{display:'none'}} title="InfoUnredirect" name="InfoUnredirect"></iframe>
 		
 				<form target="InfoUnredirect" method="POST" className="box-center-height" onChange={ValidarCampos}> 
@@ -71,9 +71,9 @@ const Login = (props) =>{
 						<div className="d">
 						</div>
 					</header>
-					<div className="box-login">
+					<div className="box-center-content">
 						<div className="content-login">						
-							<InputLine
+							<InputInbox
 								type="text"
 								name="email"
 								label="E-mail"
@@ -82,7 +82,7 @@ const Login = (props) =>{
 								required={true}
 								validate={true}
 							/>
-							<InputLine
+							<InputInbox
 								type="password"
 								name="password"
 								label="Senha"
