@@ -4,7 +4,7 @@ aside.sidebar-right{
   	width: 300px;
     position: absolute;
     right: 0px;
-    height: calc(100% - 40px);
+    height: 94.5vh;
     overflow: auto;
 }
 
@@ -31,11 +31,5 @@ aside.sidebar-right{
 .sidebar-right .version-sistem{
   text-align: center;
   display: block;
-  margin-top: 20px;
-}
-.margin-top-100{
-  margin-top: 100%;
-}
-.margin-top-20{
   margin-top: 20px;
 }

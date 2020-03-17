@@ -68,3 +68,37 @@
 .list .progress{
     height: 6px;
 }
+
+.listinfo{
+}
+.listinfo .bullet{
+    margin-bottom: 5px;
+}
+.listinfo .bullet:before{
+    background-color: aliceblue;
+    border-radius: 50%;
+    content: '';
+    float: left;
+    margin-right: 10px;
+    height: 15px;
+    width: 15px;    
+    position: relative;
+    top: 4px;
+}
+
+.bullet.inativo:before{
+    background-color: #898b8c;
+    border-color: #898b8c !important;
+}
+.bullet.danger:before{
+    background-color: #dc3545;
+    border-color: #dc3545 !important;
+}
+.bullet.success:before{
+    background-color: #28a745;
+    border-color: #28a745 !important;
+}
+.bullet.warning:before{
+    background-color: #ffc107;
+    border-color: #ffc107 !important;
+}

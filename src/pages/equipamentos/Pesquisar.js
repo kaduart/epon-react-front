@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { IcoSearch, IcoClose } from '../../components/icones'
-import { InputLine } from '../../components/form';
+import { InputLine, InputInbox } from '../../components/form';
 
 const inputsDefault = {
 	'pesquisar': ''
@@ -47,10 +47,10 @@ const Pesquisar = (props) => {
 					<div className="col-md-6 margin-bottom-15">
 						<div className="cal-group">
 							<div className="cal-colum cal-100">								
-								<InputLine
-									type="text"
+								<InputInbox
+									type="search"
 									name="pesquisar"
-									label="Pesquisar Equipamentos"
+									label="Pesquisar"
 									value={inputs['pesquisar']}
 									changeInput={(event)=> ChangeInput(event)}
 									required={true}

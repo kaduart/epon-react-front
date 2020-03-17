@@ -55,8 +55,7 @@
 .intelbras-dark .form-group.input-line input.form-control:valid + .form-label, 
 .intelbras-dark .form-group.input-line input.form-control:focus + .form-label, 
 .intelbras-dark .form-group.input-line p.form-control + .form-label, 
-.intelbras-dark .form-group.input-line input.form-control[value="a"] + .form-label,
-.intelbras-dark .custom-control-checkbox-switch{
+.intelbras-dark .form-group.input-line input.form-control[value="a"] + .form-label{
   color: #36d95b;
 }
 .intelbras-dark .form-group.input-line .form-control:focus, 

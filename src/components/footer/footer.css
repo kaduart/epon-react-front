@@ -1,12 +1,13 @@
-footer{
+footer.box-footer{
   background-color: #0c7a2f;
   box-shadow: 0 -1px 10px 0px #000000ad;
   color: #fff;
   padding: 10px 15px;
-  margin-top: 20px;
+  margin-top: 2vh;
+  height: 5vh;
 }
 
-footer p {
+footer.box-footer p {
   font-size: 11px;
   text-align: center;
   margin: 0;

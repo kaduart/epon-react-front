@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import ModalComponent from '../../../components/modal/Modal';
-import { InputLine } from '../../../components/form';
+import { InputLine, CheckboxSwitch, InputInbox } from '../../../components/form';
 
 function TelefoneContent(props) {
 	const {conteudoInfo, changeInfo, status} = props;
@@ -22,7 +22,7 @@ function TelefoneContent(props) {
 			<div className="row">
 				<div className="col-md-12">
 					{
-						conteudoInfo.telefone?
+						conteudoInfo['telefone'].text?
 						<div className={'alert-' + conteudoInfo['telefoneStatus']['type']}>
 							<small>{conteudoInfo['telefoneStatus']['text']}</small>
 						</div>
@@ -32,15 +32,17 @@ function TelefoneContent(props) {
 			</div>
 			<div className="row">
 				<div className="col-md-12">
-					<div className="custom-control-checkbox-switch">
-						<input type="checkbox" onChange={changeInfo} checked={conteudoInfo['telefone']} className="custom-input" id="telefone" name="telefone" />
-						<label className="custom-label" htmlFor="telefone">Serviço telefone</label>
-					</div>
+					<CheckboxSwitch
+						name="telefone"
+						label="Serviço telefone"
+						checked={conteudoInfo['telefone']}
+						changeInput={changeInfo}
+					/>
 				</div>
 			</div>
 			<div className="row">
 				<div className="col-md-6">
-					<InputLine
+					<InputInbox
 						type="text"
 						name="nTelefone"
 						label="Telefone"

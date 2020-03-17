@@ -3,7 +3,7 @@ import { addAlert, addCliente, removeCliente, resultSeach } from '../../../actio
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { InputLine } from '../../../components/form';
+import { InputLine, InputInboxSee } from '../../../components/form';
 
 const InfoTelefone = (props) => {
 	const {conteudoInfo} = props;
@@ -11,15 +11,19 @@ const InfoTelefone = (props) => {
 	return (
 		<div className="tab-pane show">
 			<div className="row">
-					<div className="col-md-12">
+				<div className="col-md-12">
+					{
+						conteudoInfo['telefoneStatus']['text']?
 						<div className={'alert-' + conteudoInfo['telefoneStatus']['type']}>
 							<small>{conteudoInfo['telefoneStatus']['text']}</small>
 						</div>
-					</div>
+						:null
+					}
+				</div>
 			</div>
 			<div className="row">
 				<div className="col-md-4">
-					<InputLine
+					<InputInboxSee
 						type="only-see"
 						name="nTelefone"
 						label="Telefone"

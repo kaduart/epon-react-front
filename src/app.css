@@ -5,9 +5,11 @@
 @import 'assets/inputText.css';
 @import 'assets/progress.css';
 @import 'assets/select.css';
-@import 'assets/toggle.css';
 @import 'assets/nav.css';
 @import 'assets/navbarProgress.css';
+.intelbras{
+  height: 100vh;
+}
 
 .float-left {
   float: left !important;

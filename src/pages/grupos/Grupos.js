@@ -56,8 +56,9 @@ const Clientes = (props) => {
 	const CloseModal = () =>{
 		setEditarGrupo(clienteDefault)			
 		setOpenModal(modalDefault)
-		SearchGrupos(clientesInfo)
+		SearchGrupos(gruposInfo)
 	}
+	console.log(props);
 	
 	return (
 		<section className="box-grupos">

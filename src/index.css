@@ -1728,12 +1728,15 @@ button.close {
 }
 .box-content{
 	display: flex;
-	height: calc(100vh - 40px);
+	height: 94.5vh;
 }
 .content{
-  padding-top: 15px;
   overflow: auto;
   width: 100%;
+}
+.content>.container-fluid{
+  padding-top: 15px;
+  min-height: 87.5vh;
 }
 .title-page{
   color: #3E5055;

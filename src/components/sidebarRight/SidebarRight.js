@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from "react-router-dom";
 import './sidebarRight.css';
 import { IcoUserCircle } from './../icones'
+import { CheckboxSwitch } from '../form';
 
 const MenuAdmJson = [
 	{		
@@ -71,15 +72,16 @@ const SidebarRight = (props) => {
                 }
               })
             }         
-        </ul>		
-		<div className="text-center margin-top-100">
-			<div className="custom-control-checkbox-switch">
-				<input type="checkbox" onChange={(event)=> acessibilidadeChange(event)} checked={user['preferencia']['contrast']} className="custom-input" id="contrast" name="contrast" />
-				<label className="custom-label" htmlFor="contrast" title={user['preferencia']['contrast']?'Escuro':'Claro'}>Contraste</label>
-			</div>
+        </ul>
+		<div className="text-center" style={{marginTop: '40px'}}>
+			<CheckboxSwitch 
+				title={user['preferencia']['contrast']?'Escuro':'Claro'}
+				name="contrast"
+				label="Contraste"
+				checked={user['preferencia']['contrast']}
+				changeInput={(event)=> acessibilidadeChange(event)}
+			/>
 		</div>
-		{/* <button className="btn-success bt-sair">Sair</button> */}
-		{/* <button className="btn-success bt-sair" onClick={()=>sairLogIn()}>Sair</button> */}
 		<Link className="btn-success bt-sair" to={"/login?log=out"}>Sair</Link>
 		<small className="version-sistem">1.0.9</small>
 	</aside>

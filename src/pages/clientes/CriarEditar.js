@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import ModalComponent from './../../components/modal/Modal.js';
-import { InputLine } from './../../components/form';
+import { InputInbox, TextareaInbox } from './../../components/form';
 
 function CriarEditarContent(props) {
 	const {conteudoInfo, changeInfo, status} = props;
@@ -13,7 +13,7 @@ function CriarEditarContent(props) {
 		<section className="box-cliente">
 			<div className="row">
 				<div className="col-md-4">
-					<InputLine
+					<InputInbox
 						type={status?"only-see":"text"}
 						name="nContrato"
 						label="Nº Contrato"
@@ -24,7 +24,7 @@ function CriarEditarContent(props) {
 					/>	
 				</div>
 				<div className="col-md-8">
-					<InputLine
+					<InputInbox
 						type="text"
 						name="nome"
 						label="Nome"
@@ -35,7 +35,7 @@ function CriarEditarContent(props) {
 					/>
 				</div>
 				<div className="col-md-12">
-					<InputLine
+					<TextareaInbox
 						type="text"
 						name="descricao"
 						label="Descrição"

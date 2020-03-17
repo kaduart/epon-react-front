@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import ModalComponent from '../../../components/modal/Modal';
-import { InputLine } from '../../../components/form';
+import { InputLine, CheckboxSwitch, InputInbox } from '../../../components/form';
 
 function InternetContent(props) {
 	const {conteudoInfo, changeInfo, status} = props;
@@ -32,17 +32,19 @@ console.log(conteudoInfo);
 				</div>
 			</div>
 			<div className="row">
-				<div className="col-md-12">
-					<div className="custom-control-checkbox-switch">
-						<input type="checkbox" onChange={changeInfo} checked={conteudoInfo['internet']} className="custom-input" id="internet" name="internet" />
-						<label className="custom-label" htmlFor="internet">Serviço Internet</label>
-					</div>
+				<div className="col-md-12">	
+					<CheckboxSwitch
+						name="internet"
+						label="Serviço Internet"
+						checked={conteudoInfo['internet']}
+						changeInput={changeInfo}
+					/>
 				</div>
 			</div>
 			<div className="row">
 				<div className="col-md-6">
-					<InputLine
-						type="text"
+					<InputInbox
+						type="number"
 						name="velocidade"
 						label="Velocidade (mb)"
 						value={conteudoInfo['velocidade']}
@@ -51,7 +53,7 @@ console.log(conteudoInfo);
 					/>	
 				</div>
 				<div className="col-md-6">
-					<InputLine
+					<InputInbox
 						type="text"
 						name="serial"
 						label="Serial Equipamento"
@@ -69,7 +71,7 @@ console.log(conteudoInfo);
 			</div>
 			<div className="row">
 				<div className="col-md-6">
-					<InputLine
+					<InputInbox
 						type="text"
 						name="nomeRede"
 						label="Nome da rede (SSD)"
@@ -79,8 +81,8 @@ console.log(conteudoInfo);
 					/>	
 				</div>
 				<div className="col-md-6">
-					<InputLine
-						type="text"
+					<InputInbox
+						type="password"
 						name="senhaRede"
 						label="Senha"
 						value={conteudoInfo['senhaRede']}

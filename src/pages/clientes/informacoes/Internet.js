@@ -3,7 +3,7 @@ import { addAlert, addCliente, removeCliente, resultSeach } from '../../../actio
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { InputLine } from '../../../components/form';
+import { InputLine, InputInboxSee } from '../../../components/form';
 
 const InfoInternet = (props) => {
 	const {conteudoInfo} = props;
@@ -12,23 +12,24 @@ const InfoInternet = (props) => {
 		<div className="tab-pane show">
 			<div className="row">
 				<div className="col-md-12">
-					<div className={'alert-' + conteudoInfo['internetStatus']['type']}>
-						<small>{conteudoInfo['internetStatus']['text']}</small>
-					</div>
+					{
+						conteudoInfo['internetStatus']['text']?
+						<div className={'alert-' + conteudoInfo['internetStatus']['type']}>
+							<small>{conteudoInfo['internetStatus']['text']}</small>
+						</div>
+						:null
+					}
 				</div>
 			</div>
 		<div className="row">
 			<div className="col-md-4">
-				<InputLine
-					type="only-see"
-					name="velocidade"
+				<InputInboxSee
 					label="Velocidade (mb)"
 					value={conteudoInfo['velocidade']}
-					required={true}
 				/>	
 			</div>
 			<div className="col-md-4">
-				<InputLine
+				<InputInboxSee
 					type="only-see"
 					name="serial"
 					label="Serial Equipamento"

@@ -1,0 +1,85 @@
+.form-group{
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.form-group.input-inbox {
+  padding-top: 10px;
+}
+.form-group.input-inbox  div.form-control-inbox{
+  min-height: 38px;
+}
+.form-group.input-inbox .form-control-inbox{
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+  color: #495057;
+  display: block;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 9px 15px 6px 15px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 100%;
+}
+.form-group.input-inbox textarea.form-control-inbox{
+  min-height: 90px;
+}
+.form-group.input-inbox .form-label {
+  color: currentColor;
+  cursor: auto;
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  margin: 0;
+  opacity: .7;
+  padding: 0 5px;
+  transition: top 0.15s ease-in-out, font-size 0.15s ease-in-out;
+}
+.form-group.input-inbox .form-label sup{
+  font-size: 70%;
+}
+.form-group.input-inbox input:valid + .form-label,
+.form-group.input-inbox input:focus + .form-label,
+.form-group.input-inbox input[value='a'] + .form-label,
+.form-group.input-inbox textarea:focus + .form-label,
+.form-group.input-inbox.valido .form-label{
+  border-radius: 2px;
+  font-size: 90%;
+  top: 0px;
+  opacity: 1;
+}
+
+.form-group.input-inbox .form-control-inbox,
+.form-group.input-inbox .form-label{
+  background-color: #fff;
+  color: #333;
+}
+
+.intelbras-dark .form-group.input-inbox .form-control-inbox,
+.intelbras-dark .form-group.input-inbox .form-label{
+  background-color: #383838;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+}
+
+.form-group.input-inbox input.form-control-inbox:focus + .form-label + .search-erase,
+.search-erase.inline-block{
+  display: inline-block;
+}
+.form-group input:disabled{
+  opacity: .7;
+}
+.search-erase{
+  right: 0px;
+  position: absolute;
+  top: 13px;
+  background-color: transparent;
+  border: transparent;
+  font-size: 11px;
+  opacity: .6;
+  cursor: pointer;
+  display: none;
+  padding: 10px;
+}
+.search-erase:hover{
+  opacity: .9;
+}

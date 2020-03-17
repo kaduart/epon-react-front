@@ -8,7 +8,9 @@ const ListGrupos = (props) => {
 	const ChangeAction = (event, name) =>{
 		Resposta(event, name)
 	}
-
+	const totalpessoas = 300;
+	const totalMb = 3000;
+	
 	return (		
 		<div className="row">
 			{
@@ -29,15 +31,15 @@ const ListGrupos = (props) => {
 									<p className="card-text">{card['olt']}</p>
 								
 									<div className="listinfo">
-										<small>Ativos</small>
-										<small>Inativos</small>
-										<small>Bloqueados</small>
+										<small className="bullet success">Ativos</small>
+										<small className="bullet danger">Inativos</small>
+										<small className="bullet inativo">Bloqueados</small>
 									</div>
 									<div className="text-right">
 										<small>Clientes</small>
-										<small>230</small>
+										<small>{card['clientes'].length}</small>
 										<small>Capacidade restante</small>
-										<small>50 clientes a 10mb</small>
+										<small>{ totalpessoas - card['clientes'].length } clientes a { parseInt( totalMb / (  totalpessoas - card['clientes'].length ) ) } mb</small>
 									</div>
 								</div>
 							</div>
