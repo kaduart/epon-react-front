@@ -58,7 +58,6 @@ const Clientes = (props) => {
 		setOpenModal(modalDefault)
 		SearchGrupos(gruposInfo)
 	}
-	console.log(props);
 	
 	return (
 		<section className="box-grupos">

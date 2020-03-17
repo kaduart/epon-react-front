@@ -8,7 +8,6 @@ import { InputLine, CheckboxSwitch, InputInbox } from '../../../components/form'
 
 function InternetContent(props) {
 	const {conteudoInfo, changeInfo, status} = props;
-console.log(conteudoInfo);
 
 	return (
 		<section className="box-servicos">
