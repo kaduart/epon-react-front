@@ -25,24 +25,32 @@ const Esqueci = (props) => {
 	} 
 	
 	const RestaurarLogin = (evt) =>{
-		// if (validators) {
+		if (validators) {
+			props.addAlert("Enviaremos um e-mail para restaur sua senha.", "info")
+			props.history.push('/login')
 		// 	if ( remakePassword(inputs.email) ) {
 		// 		props.addAlert("Enviaremos um e-mail para restaur sua senha.", "info")
 		// 		props.history.push('/login')
 		// 	} else {
 		// 		props.addAlert("Este e-mail não existe em nossa base.", "info")
 		// 	}
-		// }
-		props.addAlert("Enviaremos um e-mail para restaur sua senha.", "info")
-		props.history.push('/login')
+		}
 	}
 	
+	const ValidarCampos = () =>{
+        if ( ValidationForm(".box-center-height input") ) {
+            setValidators(false)
+        } else{
+            setValidators(true)
+        }
+	}
+
 	return (
 		<div className="box-center-page">
 			<div className="box-center" style={{maxWidth: '400px'}}>            
 				<iframe style={{display:'none'}} title="InfoUnredirect" name="InfoUnredirect"></iframe>
 
-				<form target="InfoUnredirect" method="POST" className="box-center-height" >			
+				<form target="InfoUnredirect" method="POST" className="box-center-height"  onChange={ValidarCampos} >			
 					<header className="box-header">
 						<div className="title-header">
 						<h1><IcoIntelbras title="Intelbras" /></h1>

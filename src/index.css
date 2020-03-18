@@ -1876,3 +1876,27 @@ button.bg-dark:focus {
 .mx-auto {
   margin-right: auto !important;
 }
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  /* box-shadow: inset 0 0 5px #0b240b; */
+  border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #3e5055;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background-color: #2f3d41;
+}

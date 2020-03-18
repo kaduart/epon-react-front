@@ -69,7 +69,6 @@ const DadosConfirmar = (props) => {
 	const guardarInfo = function (evt) {
 		info.history.push('/login');
 	}
-	console.log(cadastrando);
 	
     return (
 		<div className="box-dados">

@@ -53,7 +53,86 @@ const inicialize = [
 		'nTelefone': '',
 		'internetStatus': {'type':'success', 'text': 'Tudo ok!'},
 		'telefoneStatus': {'type':'danger', 'text': 'Telefone com problem'}
+	},
+	{
+		'nContrato': '999999g',
+		'nome': 'Davi Ribeiro macedo',
+		'descricao': 'se eu quiser',
+		'serial': '789963',
+		'internet': false,
+		'velocidade': '10',
+		'entregue': '5',
+		'telefone': false,
+		'nTelefone': '',
+		'internetStatus': {'type':'', 'text': ''},
+		'telefoneStatus': {'type':'', 'text': ''}
+	},
+	{
+		'nContrato': '888888d',
+		'nome': 'Cecilia Marques Fernandes',
+		'descricao': 'endereçço',
+		'serial': '987741',
+		'internet': true,
+		'velocidade': '0',
+		'entregue': '',
+		'telefone': false,
+		'nTelefone': '',
+		'internetStatus': {'type':'warning', 'text': 'esta tudo instavel!'},
+		'telefoneStatus': {'type':'', 'text': ''}
+	},
+	{
+		'nContrato': '000000r',
+		'nome': 'Joaquina Souza Silva de Moraes',
+		'descricao': 'lorotas',
+		'serial': '123982',
+		'internet': true,
+		'velocidade': '150',
+		'entregue': '30',
+		'telefone': true,
+		'nTelefone': '',
+		'internetStatus': {'type':'danger', 'text': 'Tudo errado'},
+		'telefoneStatus': {'type':'success', 'text': 'Tudo ok!'}
+	},
+	{
+		'nContrato': '9632147s',
+		'nome': 'Evila Maria',
+		'descricao': 'lorotas',
+		'serial': '123982',
+		'internet': true,
+		'velocidade': '10',
+		'entregue': '100',
+		'telefone': true,
+		'nTelefone': '',
+		'internetStatus': {'type':'success', 'text': 'Tudo ok!'},
+		'telefoneStatus': {'type':'danger', 'text': 'Telefone com problem'}
+	},
+	{
+		'nContrato': '000000rf',
+		'nome': 'Joaquina Souza Silva de Moraes',
+		'descricao': 'lorotas',
+		'serial': '123982',
+		'internet': true,
+		'velocidade': '150',
+		'entregue': '30',
+		'telefone': true,
+		'nTelefone': '',
+		'internetStatus': {'type':'danger', 'text': 'Tudo errado'},
+		'telefoneStatus': {'type':'success', 'text': 'Tudo ok!'}
+	},
+	{
+		'nContrato': '9632147sf',
+		'nome': 'Evila Maria',
+		'descricao': 'lorotas',
+		'serial': '123982',
+		'internet': true,
+		'velocidade': '10',
+		'entregue': '100',
+		'telefone': true,
+		'nTelefone': '',
+		'internetStatus': {'type':'success', 'text': 'Tudo ok!'},
+		'telefoneStatus': {'type':'danger', 'text': 'Telefone com problem'}
 	}
+
 ]
 export const clienteReducer = (state = inicialize, action) => {	
   switch (action.type) {

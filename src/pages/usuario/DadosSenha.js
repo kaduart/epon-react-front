@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { addAlert, guardarCadastro } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -12,6 +12,12 @@ const DadosSenha = (props) => {
 	const {cadastrando, guardarCadastro, info} = props;
 	const [inputs, setInputs] = useState(inputsDefault);
 
+	useEffect(()=>{
+		if (cadastrando.passo3) {
+			setInputs(cadastrando.passo3)
+		}
+	})
+	
 	const changeInput = function (evt) {
 		setInputs({...inputs, [evt.target.name]: evt.target.value});
     } 

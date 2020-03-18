@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { addAlert, guardarCadastro } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -12,6 +12,12 @@ const DadosPessoais = (props) => {
 	const {cadastrando, guardarCadastro, info} = props;
 	const [inputs, setInputs] = useState(inputsDefault);
 
+	useEffect(()=>{
+		if (cadastrando.passo1) {
+			setInputs(cadastrando.passo1)
+		}
+	})
+	
 	const changeInput = function (evt) {
 		setInputs({...inputs, [evt.target.name]: evt.target.value});
     } 
@@ -19,7 +25,6 @@ const DadosPessoais = (props) => {
 		guardarCadastro({...cadastrando,'passo1': inputs})
 		info.history.push('/cadastro?passo=2');
 	}
-	console.log(props, 'nnnnnnnnnnnnnnnnnnnnnnnnnnnnnn');
 	
     return (
 		<div className="box-dados">

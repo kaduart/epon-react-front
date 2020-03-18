@@ -24,6 +24,9 @@ const DadosComplementares = (props) => {
 				setUFsJson(response)
 			})
 		}
+		if (cadastrando.passo2) {
+			setInputs(cadastrando.passo2)
+		}
 	})
 	
 	const changeInput = function (evt) {
@@ -54,8 +57,7 @@ const DadosComplementares = (props) => {
 		.then(response => {
 			setcidadeJson(response)
 		})
-	} 
-console.log(UFsJson);
+	}
 	
 	const guardarInfo = function (evt) {
 		guardarCadastro({...cadastrando, 'passo2': inputs})

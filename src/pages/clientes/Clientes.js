@@ -15,6 +15,7 @@ import ServicosTelefone from './servicos/Telefone';
 import Remover from './Remover';
 import { IcoRemoveLine } from '../../components/icones/removeLine';
 import Informacoes from './informacoes/Informacoes';
+import Paginate from '../../components/pagination/Pagination';
 
 const clienteDefault = {
 	'nContrato': '',
@@ -81,6 +82,7 @@ const Clientes = (props) => {
 			<Titulo title="Clientes" />
 			<Pesquisar data={clientesInfo} criar={(event)=> Criar(event)} />
 			<ListClientes data={clientSearch} Resposta={(event, acao)=> EditarCliente(event, acao)} />
+			<Paginate />
 			{
 				openModal.criarEditar?
 				<CriarEditar openModal={openModal.criarEditar} closeModal={()=> CloseModal()} conteudoInfo={editarCliente} />
