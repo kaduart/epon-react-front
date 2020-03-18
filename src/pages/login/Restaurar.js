@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { ValidationForm, passwordConfirm } from './../../components/Validation';
+import { ValidationForm, passwordConfirm } from './../../components/validation/Validation';
 import { modifyPassword } from '../../services/services';
 import { addAlert } from './../../actions';
 import { IcoSend, IcoCross } from '../../components/icones';
