@@ -70,7 +70,7 @@ const Clientes = (props) => {
 	const Criar = (event) =>{
 		setOpenModal({...openModal, 'criarEditar': true})
 	}
-
+	
 	const CloseModal = () =>{
 		setEditarCliente(clienteDefault)			
 		setOpenModal(modalDefault)
@@ -123,6 +123,6 @@ const mapStateToProps = store => {
 		clientSearch: store.information.clientes
 })};
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ addAlert, SeachClientes}, dispatch);
+  bindActionCreators({ addAlert, SeachClientes }, dispatch);
   
 export default connect(mapStateToProps, mapDispatchToProps)(Clientes);

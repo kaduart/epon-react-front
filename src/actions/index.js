@@ -1,3 +1,9 @@
+export const loadingState = (text, load) => ({
+    type: 'LOADING',
+    text,
+    load
+});
+
 export const addAlert = (text, style) => ({
     type: 'ADD_ALERT',
     text,

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { addAlert, addCliente, removeCliente, SeachClientes } from '../../actions';
+import { loadingState, addAlert, addCliente, removeCliente, SeachClientes } from '../../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -50,7 +50,7 @@ function CriarEditarContent(props) {
 }
 
 const CriarEditar = (props) => {
-	const {conteudoInfo, openModal, closeModal, addAlert, addCliente, removeCliente, clientesDados, SeachClientes} = props;
+	const {loadingState, conteudoInfo, openModal, closeModal, addAlert, addCliente, removeCliente, clientesDados, SeachClientes} = props;
 	const [inputs, setInputs] = useState(conteudoInfo);
 	
 	const changeInfo = (event) =>{
@@ -58,6 +58,9 @@ const CriarEditar = (props) => {
 	}
 
 	const SalvarCliente = (event) =>{
+		
+		loadingState('Carregando...', true)
+		
 		closeModal()
 		if (conteudoInfo.nContrato) {
 			addAlert('Salvo com sucesso', 'success')
@@ -81,6 +84,10 @@ const CriarEditar = (props) => {
 			addCliente(inputs)
 			SeachClientes([...clientesDados, inputs])
 		}
+		
+        setTimeout(function(){ 
+			loadingState('Carregado', false)          
+        }, 800);
 	}
 	
 	const footerJson = [
@@ -115,6 +122,6 @@ const mapStateToProps = store => {
 		clientSearch: store.information.clientes
 })};
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ addAlert, addCliente, removeCliente, SeachClientes }, dispatch);
+  bindActionCreators({ loadingState, addAlert, addCliente, removeCliente, SeachClientes }, dispatch);
   
 export default connect(mapStateToProps, mapDispatchToProps)(CriarEditar);
