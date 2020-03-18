@@ -1,3 +1,9 @@
+export const loadingState = (text, load) => ({
+    type: 'LOADING',
+    text,
+    load
+});
+
 export const addAlert = (text, style) => ({
     type: 'ADD_ALERT',
     text,
@@ -43,11 +49,12 @@ export const SeachClientes = clientes => ({
     type: 'SEARCH_RESULT_CLIENTE',
     clientes
 });
-export const addCliente = ({nContrato, nome, descricao, internet, velocidade, entregue, serial, telefone, nTelefone, telefoneStatus, internetStatus}) => ({
+export const addCliente = ({nContrato, nome, descricao, grupo, internet, velocidade, entregue, serial, telefone, nTelefone, telefoneStatus, internetStatus}) => ({
     type: 'ADD_CLIENTE',
     nContrato,
     nome,
     descricao,
+    grupo,
     internet,
     velocidade,
     entregue,

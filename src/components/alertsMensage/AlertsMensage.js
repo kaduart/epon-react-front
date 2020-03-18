@@ -39,9 +39,7 @@ const AlertMensages = (props) => {
     }
 }
 
-const mapStateToProps = store => {
-    console.log(store);
-    
+const mapStateToProps = store => {    
 	return ({
 		alerts: store.alerts,
 		user: store.user

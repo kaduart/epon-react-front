@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { addAlert } from './../../actions';
 // import { remakePassword } from '../../services/services';
-import { ValidationForm } from './../../components/Validation';
+import { ValidationForm } from './../../components/validation/Validation';
 
 import './Login.css';
 import { InputLine, InputInbox } from '../../components/form';

@@ -2,13 +2,13 @@ import { LOGIN_USER } from '../actions/actionTypes';
 import { LOGOUT_USER } from '../actions/actionTypes';
 
 const inicialize = {
-		// 'id': '999999',
-		// 'nome': 'Nome Sobrenome fake',
-		// 'perfil': 'perfil',
-		// 'foto': 'perfil',
+		'id': '1',
+		'nome': 'Nome Sobrenome',
+		'perfil': 'perfil',
+		'foto': 'perfil',
 		'preferencia': {'contrast': true}
 }
-// const inicialize = {};
+const inicializenone = {'preferencia': {'contrast': true}};
 export const userReducer = (state = inicialize, action) => {
 		
   switch (action.type) {

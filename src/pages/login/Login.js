@@ -3,7 +3,7 @@ import { addAlert, logIn, logOut } from './../../actions';
 import React, { useState } from 'react'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { ValidationForm } from './../../components/Validation';
+import { ValidationForm } from './../../components/validation/Validation';
 import { IcoEnter, IcoIntelbras } from './../../components/icones';
 import { InputLine, InputInbox } from './../../components/form';
 

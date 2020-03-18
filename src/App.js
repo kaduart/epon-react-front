@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import { ProtectedRoute } from './router';
 
 import AlertMensages from './components/alertsMensage/AlertsMensage.js';
+import Load from './components/load/Load';
 import Header from './components/header/Header.js'
 import SidebarLeft from './components/sidebarLeft/SidebarLeft.js';
 import SidebarRight from './components/sidebarRight/SidebarRight.js';
@@ -56,6 +57,7 @@ function App(props) {
 				  : null
 			  }
 			  </div>
+			  <Load />
 		  </div>
 		);		
 	} else {

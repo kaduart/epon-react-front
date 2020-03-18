@@ -3,36 +3,36 @@ import { SERVICE_EQUIPAMENTO } from '../actions/actionTypes';
 import { REMOVE_EQUIPAMENTO } from '../actions/actionTypes';
 const inicialize = [
 	{
-		'id': '999999',
-		'nome': 'OLt 4587',
+		'id': '1',
+		'nome': 'Equipamento 1',
 		'ip': '999.999.999.999',
 		'porta': '9999',
-		'usuario': "eumesmo",
-		'senha': '0'
+		'usuario': "usuario1",
+		'senha': 'usuario1'
 	},
 	{
-		'id': '888888',
-		'nome': 'olt asdfghjkl',
-		'ip': '666.666.666.666',
-		'porta': '8524',
-		'usuario': 'true',
-		'senha': '0'
+		'id': '2',
+		'nome': 'Equipamento 2',
+		'ip': '555.999.999.000',
+		'porta': '5555',
+		'usuario': "usuario2",
+		'senha': 'usuario2'
 	},
 	{
-		'id': '000000',
-		'nome': 'olt Joaquina',
-		'ip': '777.854.784.111',
-		'porta': '0142',
-		'usuario': 'true',
-		'senha': '0'
+		'id': '3',
+		'nome': 'Equipamento 3',
+		'ip': '999.777.999.000',
+		'porta': '9999',
+		'usuario': "usuario3",
+		'senha': 'usuario3'
 	},
 	{
-		'id': '9632147',
-		'nome': 'olt Evila Maria',
-		'ip': '101.110.210.354',
-		'porta': '8000',
-		'usuario': true,
-		'senha': '0'
+		'id': '4',
+		'nome': 'Equipamento 4',
+		'ip': '123.456.789.999',
+		'porta': '9999',
+		'usuario': "usuario4",
+		'senha': 'usuario4'
 	}
 ]
 

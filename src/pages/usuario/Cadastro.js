@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { passwordConfirm, ValidationForm } from '../../components/Validation';
-import { MaskItem } from './../../components/Mask';
+import { passwordConfirm, ValidationForm } from '../../components/validation/Validation';
+import { MaskItem } from './../../components/mask/Mask';
 import { IcoCross, IcoIntelbras } from '../../components/icones';
 
 import './../login/Login.css';

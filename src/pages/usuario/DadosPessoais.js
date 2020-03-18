@@ -16,7 +16,7 @@ const DadosPessoais = (props) => {
 		if (cadastrando.passo1) {
 			setInputs(cadastrando.passo1)
 		}
-	})
+	},[])
 	
 	const changeInput = function (evt) {
 		setInputs({...inputs, [evt.target.name]: evt.target.value});

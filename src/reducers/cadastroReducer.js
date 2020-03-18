@@ -3,9 +3,9 @@ import { REMOVE_GRUPO } from '../actions/actionTypes';
 
 const inicialize = [
 	{
-		'id': '999999',
-		'nome': 'Grupo 25mg',
-		'descricao': 'Grupo 25mg',
+		'id': '1',
+		'nome': 'nome sobrenome',
+		'descricao': 'descrição',
 		'olts': [],
 		'clientes': []
 	}
