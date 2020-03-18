@@ -140,7 +140,7 @@ export const clienteReducer = (state = inicialize, action) => {
 		return [
 		 	...state,
 		  	{				  
-				nContrato: action.nContrato,
+				nContrato: (action.nContrato == '')?''+Math.floor((Math.random() * 256) + 100000)+'':action.nContrato,
 				nome: action.nome,
 				descricao: action.descricao,
 				internet: action.internet,
