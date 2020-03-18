@@ -27,7 +27,7 @@ const DadosComplementares = (props) => {
 		if (cadastrando.passo2) {
 			setInputs(cadastrando.passo2)
 		}
-	})
+	},[])
 	
 	const changeInput = function (evt) {
 		setInputs({...inputs, [evt.target.name]: evt.target.value});
