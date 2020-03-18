@@ -2,8 +2,8 @@ import { LOGIN_USER } from '../actions/actionTypes';
 import { LOGOUT_USER } from '../actions/actionTypes';
 
 const inicialize = {
-		'id': '999999',
-		'nome': 'Nome Sobrenome fake',
+		'id': '1',
+		'nome': 'Nome Sobrenome',
 		'perfil': 'perfil',
 		'foto': 'perfil',
 		'preferencia': {'contrast': true}

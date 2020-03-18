@@ -4,10 +4,11 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import ModalComponent from './../../components/modal/Modal.js';
-import { InputInbox, TextareaInbox } from './../../components/form';
+import { InputInbox, TextareaInbox, SelectInbox } from './../../components/form';
 
 function CriarEditarContent(props) {
-	const {conteudoInfo, changeInfo, status} = props;
+	const {conteudoInfo, changeInfo, status, gruposDados} = props;
+console.log(gruposDados);
 
 	return (
 		<section className="box-cliente">
@@ -44,13 +45,27 @@ function CriarEditarContent(props) {
 						required={true}
 					/>
 				</div>
+				<div className="col-md-6">					
+					<SelectInbox
+						labelDefault="nome"
+						idDefault="nome"
+						type="text"
+						name="grupo"
+						label="Grupo"
+						value={conteudoInfo['grupo']}
+						changeInput={changeInfo}
+						required={true}
+
+						options={gruposDados}
+					/>
+				</div>
 			</div>
     	</section>
   );
 }
 
 const CriarEditar = (props) => {
-	const {loadingState, conteudoInfo, openModal, closeModal, addAlert, addCliente, removeCliente, clientesDados, SeachClientes} = props;
+	const {loadingState, conteudoInfo, openModal, closeModal, addAlert, addCliente, removeCliente, clientesDados, SeachClientes, gruposDados} = props;
 	const [inputs, setInputs] = useState(conteudoInfo);
 	
 	const changeInfo = (event) =>{
@@ -108,7 +123,7 @@ const CriarEditar = (props) => {
 			open={openModal} 
 			close={closeModal} 
 			title={conteudoInfo.nContrato?"Editar Cliente":"Criar Cliente"} 
-			container={<CriarEditarContent conteudoInfo={ inputs } status={conteudoInfo.nContrato} changeInfo={ (event)=> changeInfo(event) } />} 
+			container={<CriarEditarContent gruposDados={gruposDados} conteudoInfo={ inputs } status={conteudoInfo.nContrato} changeInfo={ (event)=> changeInfo(event) } />} 
 			footer={footerJson} 
 			sizeClass="modal-lg"
 		/>
@@ -119,6 +134,7 @@ const mapStateToProps = store => {
 	return ({
 		alerts: store.alerts,
 		clientesDados: store.clientes,
+		gruposDados: store.grupos,
 		clientSearch: store.information.clientes
 })};
 const mapDispatchToProps = dispatch =>

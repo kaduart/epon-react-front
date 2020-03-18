@@ -3,30 +3,30 @@ import { REMOVE_GRUPO } from '../actions/actionTypes';
 
 const inicialize = [
 	{
-		'id': '999999',
-		'nome': 'Grupo 25mg',
-		'descricao': 'Grupo 25mg',
+		'id': '1',
+		'nome': 'Grupo 1',
+		'descricao': 'Descrição grupo 1',
 		'olts': [],
 		'clientes': []
 	},
 	{
-		'id': '888888',
-		'nome': 'Teste relampago',
-		'descricao': 'Grupo 25mg',
+		'id': '2',
+		'nome': 'Grupo 2',
+		'descricao': 'Descrição grupo 2',
 		'olts': [],
 		'clientes': []
 	},
 	{
-		'id': '000000',
-		'nome': 'isso ai',
-		'descricao': 'Grupo 25mg',
+		'id': '3',
+		'nome': 'Grupo 3',
+		'descricao': 'Descrição grupo 3',
 		'olts': [],
 		'clientes': []
 	},
 	{
-		'id': '9632147',
-		'nome': 'Evila Maria',
-		'descricao': 'Grupo 25mg',
+		'id': '4',
+		'nome': 'Grupo 4',
+		'descricao': 'Descrição grupo 4',
 		'olts': [],
 		'clientes': []
 	}
