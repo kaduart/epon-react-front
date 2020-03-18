@@ -82,7 +82,11 @@ const Clientes = (props) => {
 			<Titulo title="Clientes" />
 			<Pesquisar data={clientesInfo} criar={(event)=> Criar(event)} />
 			<ListClientes data={clientSearch} Resposta={(event, acao)=> EditarCliente(event, acao)} />
-			<Paginate />
+			{
+				(clientSearch.length >= 10)?
+				<Paginate />
+				:null
+			}
 			{
 				openModal.criarEditar?
 				<CriarEditar openModal={openModal.criarEditar} closeModal={()=> CloseModal()} conteudoInfo={editarCliente} />
