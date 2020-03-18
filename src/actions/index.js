@@ -103,3 +103,27 @@ export const logOut = ({id, nome, perfil, preferencia}) => ({
     perfil,
     preferencia
 });
+
+export const authStart = () => {
+    return{
+        type:'AUTH_START'   
+    }
+};
+export const authSuccess = (authData) => {
+    return{
+        type: 'AUTH_SUCCESS',
+        authData:authData
+    };
+    
+};
+export const authError= (error) => {
+    return{
+        type: 'AUTH_FAIL',
+        error:error
+    };
+};
+
+// export const auth = (email,password) => {  //TODO: criar esta action depois de adicionar redux thunk
+//  return dispac   
+// }
+
