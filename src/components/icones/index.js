@@ -16,6 +16,7 @@ export * from './information';
 export * from './intelbras';
 export * from './menu';
 export * from './muteLine';
+export * from './reload';
 export * from './remove';
 export * from './removeLine';
 export * from './signal';

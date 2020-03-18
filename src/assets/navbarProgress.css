@@ -6,7 +6,7 @@
     display: table-cell;
     vertical-align: middle;
 }
-.navbar-progress>div:before{
+.navbar-progress>div:after{
   background-color: #6c757d;
   content: '';
   display: inline-block;
@@ -15,10 +15,10 @@
   position: relative;
   top: -4px;
 }
-.navbar-progress>div:first-child:before{
+.navbar-progress>div:last-child:after{
   display: none;
 }
-.navbar-progress>div:first-child{
+.navbar-progress>div:last-child{
   width: 1%;
 }
 .navbar-progress>div>button{  
@@ -33,4 +33,7 @@
 .navbar-progress>div>button:hover{  
   background-color: #28a745;
   border-color: #28a745;
+}
+.navbar-progress>div>button:focus{
+  outline: none;
 }

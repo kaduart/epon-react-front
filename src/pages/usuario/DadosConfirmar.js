@@ -4,46 +4,61 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import './../login/Login.css';
-import { InputLine } from '../../components/form';
+import { InputInboxSee } from '../../components/form';
 
-const inputsDefault = {'nome': '', 'sobrenome':'', 'email':'', 'emailConfirme':'', 'emailAlternativo':''};
+const inputsDefault = {
+	'passo1':{'nome': '', 'sobrenome':'', 'email':'', 'emailAlternativo':''},
+	'passo2':{'telefone': '', 'cep':'', 'cidade':'', 'uf':''}
+};
 
 const BoxPasso1 = (props) => {
 	const {cadastrando} = props;
-	const Passo1 = cadastrando.passo1;
+	const Passo1 = cadastrando.passo1?cadastrando.passo1:inputsDefault.passo1;
 	return(
 		<div className="row">   
 			<div className="col-md-12">
-				<small>Nome Sobrenome</small>
-				<p><strong>{Passo1?Passo1.nome:''} {Passo1?Passo1.sobrenome:''}</strong></p>
+				<InputInboxSee
+					label="Nome Sobrenome"
+					value={Passo1.nome + ' ' +Passo1.sobrenome}
+				/>
 			</div>			
 			<div className="col-md-12">
-				<small>E-mail</small>
-				<p><strong>{Passo1?Passo1.email:''}</strong></p>
+				<InputInboxSee
+					label="E-mail"
+					value={Passo1.email}
+				/>
 			</div>			
 			<div className="col-md-12">
-				<small>E-mail alternativo</small>
-				<p><strong>{Passo1?Passo1.emailAlternativo:''}</strong></p>
+				<InputInboxSee
+					label="E-mail alternativo"
+					value={Passo1.emailAlternativo}
+				/>
 			</div>
 		</div>
 	)
 }
 const BoxPasso2 = (props) => {
 	const {cadastrando} = props;
-	const Passo2 = cadastrando.passo2;
+	const Passo2 = cadastrando.passo2?cadastrando.passo2:inputsDefault.passo2;
 	return(
 		<div className="row">   
 			<div className="col-md-6">
-				<small>Telefone</small>
-				<p><strong>{Passo2?Passo2.telefone:''}</strong></p>
+				<InputInboxSee
+					label="Telefone"
+					value={Passo2.telefone}
+				/>
 			</div>			
 			<div className="col-md-12">
-				<small>Cep/Cidade/UF</small>
-				<p><strong>{Passo2?Passo2.cep:''} - {Passo2?Passo2.cidade:''} - {Passo2?Passo2.uf:''}</strong></p>
+				<InputInboxSee
+					label="Cep / Cidade / UF"
+					value={Passo2.cep + ' - ' + Passo2.cidade + ' - ' + Passo2.uf}
+				/>
 			</div>			
 			<div className="col-md-12">
-				<small>Perfil</small>
-				<p><strong>{Passo2?Passo2.perfil:''}</strong></p>
+				{/* <InputInboxSee
+					label="Perfil"
+					value={Passo2.perfil}
+				/> */}
 			</div>
 		</div>
 	)

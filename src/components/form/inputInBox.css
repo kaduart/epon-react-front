@@ -83,3 +83,12 @@
 .search-erase:hover{
   opacity: .9;
 }
+
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0 30px #242424 inset;
+    transition: background-color 500s ease-in-out 0s;
+}

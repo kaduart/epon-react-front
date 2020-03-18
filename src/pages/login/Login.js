@@ -27,24 +27,24 @@ const Login = (props) =>{
 	// logIn({'id': '', 'nome': '', 'perfil': '', 'foto': '', 'preferencia': {} })
 
 	const EntrarLogin = () =>{
-		// if(validators){
-		// 	if ( loginAutentication(props, inputs) ){
-		// 		props.history.push('/')				
-		// 	} else{
-		// 		addAlert("E-mail e/ou senha incorreto(s).", "danger")
-		// 	}			
-		// } else{
-		// 	addAlert("Verifique se os campos estão preenchidos corretamente.", "danger")
-		// }
-		console.log(props);
-		logIn(inicialize)
-		history.push('/');
-		
+		if(validators){
+			// if ( loginAutentication(props, inputs) ){
+			// 	props.history.push('/')				
+			// } else{
+			// 	addAlert("E-mail e/ou senha incorreto(s).", "danger")
+			// }
+
+			logIn(inicialize)
+			history.push('/');
+		} else{
+			addAlert("Verifique se os campos estão preenchidos corretamente.", "info")
+		}		
 	} 
 
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);
 	const product = urlParams.get('log')
+
 	if(product === 'out'){
 		logOut(inicialize)
 		history.push('/login');
@@ -74,7 +74,7 @@ const Login = (props) =>{
 					<div className="box-center-content">
 						<div className="content-login">						
 							<InputInbox
-								type="text"
+								type="email"
 								name="email"
 								label="E-mail"
 								value={inputs['email']}
@@ -84,17 +84,17 @@ const Login = (props) =>{
 							/>
 							<InputInbox
 								type="password"
-								name="password"
+								name="senha"
 								label="Senha"
-								value={inputs['password']}
+								value={inputs['senha']}
 								changeInput={(event)=> InputChange(event)}
 								required={true}
 								validate={true}
 							/>
 						</div>				
 						<button type="button" className="btn-success cal-100" onClick={(event) => EntrarLogin()} >Entrar</button>
-						<button type="button" className="btn-link link-custom-login" onClick={() => props.history.push('/cadastro?passo=1')} >Criar Perfil</button>
-						<button type="button" className="btn-link link-custom-login right" onClick={() => props.history.push('/relembrar-senha')} >Esqueci a Senha</button>
+						<button type="button" className="btn-outline-secondary link-custom-login" onClick={() => props.history.push('/cadastro?passo=1')} >Criar Perfil</button>
+						<button type="button" className="btn-outline-secondary link-custom-login right" onClick={() => props.history.push('/relembrar-senha')} >Esqueci a Senha</button>
 					</div>
 				</form>
 			</div> 

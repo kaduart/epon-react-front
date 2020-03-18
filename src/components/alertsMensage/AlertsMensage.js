@@ -10,7 +10,8 @@ const AlertMensages = (props) => {
         removeAlert(event)
     }
 
-    if (!user.id && window.location.pathname !== '/login') {
+    const localpg = window.location.pathname;
+    if (!user.id && (localpg === '/' || localpg === '/clientes' || localpg === '/equipamentos' || localpg === '/grupos') ) {
     window.location.replace('/login');
     }
     

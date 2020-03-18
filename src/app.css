@@ -58,6 +58,23 @@
 .cal-group .form-group{
   margin: 0;
 }
+.cal-input .cal-colum [class*='form-control']{
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.cal-input .cal-button{
+  padding: 0;
+}
+.cal-input .cal-button [class*='btn-']{
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+
+  margin-top: 10px;
+  min-height: 38px;
+}
+
+
+
 
 [class*="col-"]>[class*="alert-"]{
   margin-bottom: 20px;
